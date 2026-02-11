@@ -29,6 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // API routes
+app.use("/integrations/n8n", require('./routers/n8n.routes'));
 app.use('/api', require('./routers/router'));
 
 module.exports = app;
