@@ -17,7 +17,7 @@ const corsOptions = {
   },
   credentials: true,
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
+allowedHeaders: ["Content-Type", "Authorization", "x-api-key"]
 };
 
 app.use(cors(corsOptions));
@@ -30,6 +30,5 @@ app.use(cookieParser());
 
 // API routes
 app.use("/integrations/n8n", require('./routers/n8n.routes'));
-app.use('/api', require('./routers/router'));
-
+app.use('/', require('./routers/router'));
 module.exports = app;
