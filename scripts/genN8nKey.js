@@ -4,3 +4,4 @@ const crypto = require("crypto");
 const key = crypto.randomBytes(32).toString("hex"); // 64 znaki hex
 
 console.log(key);
+// #lodowy
