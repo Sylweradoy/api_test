@@ -38,4 +38,3 @@ app.use("/integrations/n8n", require("./routers/n8n.routes"));
 app.use("/", require("./routers/router"));
 
 module.exports = app;
-module.exports = app;
