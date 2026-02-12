@@ -1,7 +1,5 @@
-const app = require("../app/app");        // <- Twoje express app (ten plik co pokazałeś)
-const connectDB = require("../app/db/connect");
+const app = require("../app/app");
 
-module.exports = async (req, res) => {
-  await connectDB();
+module.exports = (req, res) => {
   return app(req, res);
 };
