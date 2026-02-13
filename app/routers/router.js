@@ -19,4 +19,7 @@ router.post('/auth/login', loginLimiter, authController.login);
 router.post('/auth/logout', authController.logout);
 router.get('/auth/me', requireAuth, authController.me);
 
+router.use("/admin", require("./admin.gallery.routes"));
+router.use("/gallery", require("./gallery.public.routes"));
+
 module.exports = router;
