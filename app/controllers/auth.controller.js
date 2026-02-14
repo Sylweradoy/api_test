@@ -39,12 +39,15 @@ class AuthController {
       return res.status(500).json({ ok: false, error: 'SERVER_ERROR' });
     }
   }
+logout(req, res) {
+  const cookieName = getCookieName();
 
-  logout(req, res) {
-    const cookieName = getCookieName();
-    res.clearCookie(cookieName, { path: '/' });
-    return res.json({ ok: true });
-  }
+  // ✅ kasuj tymi samymi opcjami co ustawiasz
+  const opts = cookieOptions();
+  res.clearCookie(cookieName, opts);
+
+  return res.json({ ok: true });
+}
 
    async me(req, res) {
   try {
