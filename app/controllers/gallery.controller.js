@@ -61,7 +61,7 @@ class GalleryController {
           images: 1,
           coverImageId: 1,
           createdAt: 1,
-          updatedAt: 1,
+          updatedAt: 1.
         })
         .lean();
 
